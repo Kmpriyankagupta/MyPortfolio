@@ -9,10 +9,10 @@ class homepagedata(models.Model):
     about_headline_description = models.CharField(max_length=400)
     about_headline_description1 = models.CharField(max_length=40)
     text_array = ArrayField(
-        models.TextField(),  # Specifies the type of the array (TextField in this case)
-        blank=True,           # Allows the field to be empty in forms (doesn't require input)
-        null=True,            # Allows the field to store NULL values in the database
-        default=list         # Default to an empty list if no value is provided
+        models.TextField(),  
+        blank=True,           
+        null=True,            
+        default=list        
     )
     clients_heading = models.CharField(max_length=200)
     clients_description = models.CharField(max_length=400)
