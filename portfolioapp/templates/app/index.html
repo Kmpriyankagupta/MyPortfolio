@@ -11,17 +11,14 @@
         <div class="row s-intro__content width-sixteen-col">
 
             <div class="column lg-12 s-intro__content-inner grid-block">
-                
+                {% for i in home %}
                 <div class="s-intro__content-text">
-                    <div class="s-intro__content-pretitle text-pretitle">Hello, I'm Monica</div>
+                    <div class="s-intro__content-pretitle text-pretitle">{{i.name}}</div>
                     <h1 class="s-intro__content-title">
-                    I create marketing <br>
-                    strategies for your <br>
-                    business that get <br>
-                    results.
+                    {{i.description}}
                     </h1>
                 </div> <!-- s-intro__content-text -->
-
+              
                 <div class="s-intro__content-media"> 
                     <div class="s-intro__content-media-inner">                               
                         <img src="{% static 'images/intro-bg.jpg' %}" srcset="/static/images/intro-bg.jpg 1x, /static/images/intro-bg@2x.jpg 2x" alt="">
@@ -58,34 +55,20 @@
                 <div class="section-header grid-section-split__header">
                     <div class="text-pretitle">About</div>                           
                     <h2 class="text-display-title">
-                    An inspiring headline about yourself.
+                    {{i.about_headline}}
                     </h2>                           
                 </div> <!-- end section-header -->
 
                 <div class="s-about__content-main grid-section-split__primary">
                     <p class="attention-getter">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Repellendus iste ipsam quod repellat. Hic tempora ullam aperiam 
-                    ipsum optio magni vel inventore voluptatibus nisi maiores laboriosam 
-                    fuga iure, velit eligendi ab vero minima? Quae ducimus ab dignissimos 
-                    iure, eos consequatur est deleniti cum id aliquid neque.
+                   {{i.about_headline_description}}
                     </p>
 
                     <p class="attention-getter">
-                    Autem tenetur commodi maiores. Lorem ipsum dolor sit, amet consectetur adipisicing elit.  
-                    Est eligendi fugit, facilis velit reiciendis iure laudantium. Praesentium repellat 
-                    corrupti dolor sit sint obcaecati. Modi aut quo molestiae a explicabo maiores necessitatibus 
-                    nemo repellendus architecto? Corrupti numquam ullam nostrum, eveniet at doloribus blanditiis 
-                    aliquid a est porro aspernatur pariatur culpa soluta nesciunt odio quasi maxime debitis illum.
+                        {{i.about_headline_description1}}
                     </p>
 
-                    <p class="attention-getter">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Repellendus iste ipsam quod repellat. Hic tempora ullam aperiam 
-                    ipsum optio magni vel inventore voluptatibus nisi maiores laboriosam 
-                    fuga iure, velit eligendi ab vero minima? Quae ducimus ab dignissimos 
-                    iure, eos consequatur est deleniti cum id aliquid neque.
-                    </p>
+                  
                 </div> <!-- end s-about__content-main -->
 
                 <div class="s-about__content-btn grid-section-split__bottom">
@@ -93,12 +76,13 @@
 
                     <ul class="s-about__social social-list">
                         <li>
-                            <a href="#0">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M20,3H4C3.447,3,3,3.448,3,4v16c0,0.552,0.447,1,1,1h8.615v-6.96h-2.338v-2.725h2.338v-2c0-2.325,1.42-3.592,3.5-3.592 c0.699-0.002,1.399,0.034,2.095,0.107v2.42h-1.435c-1.128,0-1.348,0.538-1.348,1.325v1.735h2.697l-0.35,2.725h-2.348V21H20 c0.553,0,1-0.448,1-1V4C21,3.448,20.553,3,20,3z"></path></svg>
-                                <span class="u-screen-reader-text">Facebook</span>
+                            <a href="https://www.linkedin.com/in/priyanka-gupta-aab116212">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:">
+                                    <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11.5 19h-3v-9h3v9zm-1.5-10.28c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 10.28h-3v-4.5c0-1.345-.485-2.25-1.692-2.25-.923 0-1.469.63-1.708 1.237-.089.214-.111.512-.111.811v4.702h-3v-9h3v1.237c.401-.619 1.118-1.237 2.54-1.237 1.869 0 3.471 1.218 3.471 3.837v5.163z"></path>
+                                </svg>
+                                <span class="u-screen-reader-text">LinkedIn</span>
                             </a>
                         </li>
-                        <li>
                             <a href="#0">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M19.633,7.997c0.013,0.175,0.013,0.349,0.013,0.523c0,5.325-4.053,11.461-11.46,11.461c-2.282,0-4.402-0.661-6.186-1.809 c0.324,0.037,0.636,0.05,0.973,0.05c1.883,0,3.616-0.636,5.001-1.721c-1.771-0.037-3.255-1.197-3.767-2.793 c0.249,0.037,0.499,0.062,0.761,0.062c0.361,0,0.724-0.05,1.061-0.137c-1.847-0.374-3.23-1.995-3.23-3.953v-0.05 c0.537,0.299,1.16,0.486,1.82,0.511C3.534,9.419,2.823,8.184,2.823,6.787c0-0.748,0.199-1.434,0.548-2.032 c1.983,2.443,4.964,4.04,8.306,4.215c-0.062-0.3-0.1-0.611-0.1-0.923c0-2.22,1.796-4.028,4.028-4.028 c1.16,0,2.207,0.486,2.943,1.272c0.91-0.175,1.782-0.512,2.556-0.973c-0.299,0.935-0.936,1.721-1.771,2.22 c0.811-0.088,1.597-0.312,2.319-0.624C21.104,6.712,20.419,7.423,19.633,7.997z"></path></svg>
                                 <span class="u-screen-reader-text">Twitter</span>
@@ -134,11 +118,11 @@
                 <div class="section-header grid-section-split__header">
                     <div class="text-pretitle">Expertise</div>                           
                     <h2 class="text-display-title">
-                    My key areas of expertise.
+                   {{i.exerpertise}}
                     </h2>     
                     
                     <p class="lead">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum suscipit debitis quam dignissimos veritatis atque pariatur magnam obcaecati fugit reprehenderit vel numquam facere esse est deserunt, perferendis commodi voluptatem similique.
+                    {{i.exerpertise_description}}
                     </p>
                 </div> <!-- end section-header -->
 
@@ -147,49 +131,41 @@
                     <div class="grid-list-items list-items show-ctr">
                         <div class="grid-list-items__item list-items__item">
                             <div class="grid-list-items__title list-items__item-header">
-                                <h3 class="list-items__item-title">Digital Marketing</h3>
+                                <h3 class="list-items__item-title">{{i.expse_type1_heading}}</h3>
                             </div>
                             <div class="grid-list-items__text list-items__item-text">
                                 <p>
-                                Quibusdam quis autem voluptatibus earum vel ex error ea magni. Rerum quam quos. Aut asperiores 
-                                sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi ut 
-                                magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.
+                               {{i.expse_type1_description}}
                                 </p>
                             </div>
                         </div> <!-- list-item -->
                         <div class="grid-list-items__item list-items__item">
                             <div class="grid-list-items__title list-items__item-header">
-                                <h3 class="list-items__item-title">Project Management</h3>
+                                <h3 class="list-items__item-title">{{i.expse_type2_heading}}</h3>
                             </div>
                             <div class="grid-list-items__text list-items__item-text">
                                 <p>
-                                Rerum quam quos. Quibusdam quis autem voluptatibus earum vel ex error ea magni. Aut asperiores 
-                                sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi ut 
-                                magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.
+                                    {{i.expse_type2_description}}
                                 </p>
                             </div>
                         </div> <!-- list-expertise__item -->
                         <div class="grid-list-items__item list-items__item">
                             <div class="grid-list-items__title list-items__item-header">
-                                <h3 class="list-items__item-title">Content Marketing</h3>
+                                <h3 class="list-items__item-title">{{i.expse_type3_heading}}</h3>
                             </div>  
                             <div class="grid-list-items__text list-items__item-text">
                                 <p>
-                                Eaque velit eligend. iQuibusdam quis autem voluptatibus earum vel ex error ea magni. 
-                                Rerum quam quos. Aut asperiores sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. 
-                                Eaque velit eligendi ut magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.
+                                    {{i.expse_type3_description}}
                                 </p>
                             </div>
                         </div> <!-- list-expertise__item -->
                         <div class="grid-list-items__item list-items__item">
                             <div class="grid-list-items__title list-items__item-header">
-                                <h3 class="list-items__item-title">Research & Discovery</h3>
+                                <h3 class="list-items__item-title">{{i.expse_type4_heading}}</h3>
                             </div>
                             <div class="grid-list-items__text list-items__item-text">
                                 <p>
-                                Quibusdam quis autem voluptatibus earum vel ex error ea magni. Rerum quam quos. Aut asperiores 
-                                sit mollitia. Rem neque et voluptatem eos quia sed eligendi et. Eaque velit eligendi ut 
-                                magnam. Cumque ducimus laborum doloribus facere maxime vel earum quidem enim suscipit.
+                                    {{i.expse_type4_description}}
                                 </p>
                             </div>
                         </div> <!-- list-expertise__item -->
@@ -216,30 +192,23 @@
                 <div class="section-header grid-section-split__header">
                     <div class="text-pretitle">Clients</div>                           
                     <h2 class="text-display-title">
-                    I have had the privilege of working with these incredible brands.
+                    {{i.clients_heading}}
                     </h2>       
                 </div> <!-- end section-header -->
             
                 <div class="grid-section-split__primary">
                     <p class="lead">
-                    Quibusdam quis autem voluptatibus earum vel ex error ea. Lorem ipsum dolor sit amet consectetur 
-                    adipisicing elit. Laborum suscipit debitis quam dignissimos veritatis atque pariatur magnam 
-                    obcaecati fugit reprehenderit vel numquam facere esse est deserunt, perferendis commodi voluptatem similique.
+                    {{i.clients_description}}
                     </p>   
 
                     <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, numquam molestiae vel quaerat quas 
-                    facilis voluptates rerum aspernatur quam voluptatem ea, vitae illo, omnis minus vero minima maiores 
-                    quia nihil incidunt provident debitis ab qui quasi. Iure unde numquam in nulla praesentium nesciunt 
-                    dolore exercitationem, odit expedita minima quisquam ullam ex. Aut perferendis vel consectetur modi esse.
-                    Temporibus reprehenderit alias magni atque repellat aspernatur voluptates, accusantium pariatur libero ad 
-                    nesciunt illum labore facere. Earum iure consequatur cumque omnis maiores optio.
+                    {{i.clients_description1}}
                     </p>
                 </div> <!-- end grid-section-split__primary -->
             
             </div> <!-- end column -->
         </div> <!-- end row -->
-
+        {% endfor %}
         <div class="row s-clients__content-block width-sixteen-col">
             <div class="column xl-12">
             

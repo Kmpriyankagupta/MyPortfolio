@@ -1,8 +1,10 @@
 from django.shortcuts import render
+from .models import *
 
 def index(request):
+    home = homepagedata.objects.all()
     
-    return render(request,'app/index.html')
+    return render(request,'app/index.html', {'home':home})
 
 def testing(request):
     return render(request,'app/tesying.html')
