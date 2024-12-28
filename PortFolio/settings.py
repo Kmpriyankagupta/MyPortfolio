@@ -134,6 +134,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # Only used when DEBUG=Fals
 # Additional directories to look for static files
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'portfolioapp/static/')]
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 

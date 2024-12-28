@@ -10,11 +10,13 @@ def testing(request):
     return render(request,'app/tesying.html')
 
 def about(request):
-    return render(request,'app/about.html')
+    about = aboutpagedata.objects.all()
+    return render(request,'app/about.html',{'about':about})
 def services(request):
     return render(request,'app/services.html')
-def contact(request):
-    return render(request,'app/contact.html')
+def contactt(request):
+    contat = contact.objects.all()
+    return render(request,'app/contact.html', {'contat':contat})
 def blog(request):
     return render(request,'app/blog.html')
 def testing(request):
